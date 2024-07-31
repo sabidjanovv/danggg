@@ -4,15 +4,17 @@
   <body>
     <%- include("./partials/nav.ejs") %>
 
-    <h2><%=user.name %></h2>
-    <p>User name: <%=user.username %></p>
-    <p>Email: <%=user.email %></p>
-    <p>Phone: <%=user.phone %></p>
-    <p>Website: <%=user.website %></p>
-    <p>Address: <%=user?.address?.city %></p>
+    <h1><%=user.name %></h1>
+    <div class="color_change">
+      <p>User name: <%=user.username %></p>
+      <p>Email: <%=user.email %></p>
+      <p>Phone: <%=user.phone %></p>
+      <p>Website: <%=user.website %></p>
+      <p>Address: <%=user?.address?.city %></p>
+    </div>
 
-    <a href="/edit/<%=user.id %>">Tahrirlash</a>
-    <button data-id="<%=user.id %>" id="delUser">
+    <a href="/edit/<%=user.id %>" class="edit_user">Tahrirlash</a>
+    <button data-id="<%=user.id %>" id="delUser" class="del_user">
       O'chirish
     </button>
     <script>

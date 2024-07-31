@@ -9,7 +9,7 @@ const getUsers = async (req, res) => {
     res.render(createViewPath("users"), {
       title: "Users",
       users,
-      page_name: "/users",
+      page_name: "users",
     });
   } catch (error) {
     console.error("Ma'lumot o'qishda xatolik: ", error);

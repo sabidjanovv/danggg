@@ -1,3 +1,70 @@
+body{
+  background-color: #011427;
+}
+
+p{
+  color: #64ffda;
+}
+
+ol{
+  color: #64ffda;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+li a, h1{
+  color: #648bff;
+  text-decoration: none;
+}
+
+.add_user, .edit_user, .del_user{
+  text-decoration: none;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #64ffda;
+  font-weight: bold;
+  transition: all ease-in-out 0.3s;
+  outline: 1px solid #64ffda;
+}
+
+.add_user:hover, .edit_user:hover, .del_user:hover{
+  list-style-type: none;
+  transition: all ease-in-out 0.3s;
+  background-color: #64ffda;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.add_post{
+  text-decoration: none;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #64ffda;
+  font-weight: bold;
+  transition: all ease-in-out 0.3s;
+  outline: 1px solid #64ffda;
+}
+
+.add_post:hover{
+  list-style-type: none;
+  transition: all ease-in-out 0.3s;
+  background-color: #64ffda;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -16,9 +83,13 @@ nav li a {
   text-decoration: none;
 }
 nav li a:hover {
-  background-color: blue;
+  background-color: #64ffda;
+}
+
+.color_change{
+  color: #64ffda;
 }
 
 .active {
-  background-color: chocolate;
+  background-color: #648bff;
 }

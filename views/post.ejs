@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1><%= post.title %></h1>
+    <p><i><%= post.body %></i></p>
+
+    <a href="/edit_post/<%= post.id %>" class="edit_user">Tahrirlash</a>
+    <button data-id="<%= post.id %>" id="delPost" class="del_user">
+      O'chirish
+    </button>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const delButton = document.getElementById("delPost");
+        delButton.addEventListener("click", (e) => {
+          const id = e.target?.dataset?.id || null;
+          if (id) {
+            fetch(`/post/${id}`, {
+              method: "DELETE",
+            })
+              .then((response) => {
+                if (response.ok) {
+                  console.log("Post deleted");
+                  alert("Post Deleted");
+                  setTimeout(() => {
+                    window.location.href = "/posts";
+                  }, 200);
+                } else {
+                  console.error("Failed to delete post");
+                  alert("Failed to delete post");
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+                alert("Error deleting post");
+              });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
